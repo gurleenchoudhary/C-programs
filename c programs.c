@@ -437,6 +437,30 @@ int main()
         default : printf("\n BLACK");
                   break;
     }
+    
+    
+    //to check whether the number is a krishnamurty or not
+    int i,q,a=0,d,t,z=1; 
+    printf("enter the number:"); 
+    scanf("%d",&q); 
+    t=q; 
+    while(q>0) 
+    {
+        d=q%10;
+        z=1; 
+        for( i=1;i<=d;i++) 
+        {
+            z=z*i;
+        } 
+        a=a+z; 
+        q=q/10;
+    }
+    if(a==t) 
+        printf("krishnamurti number");
+    else 
+        printf("not a krishnamurti number");
+
+
 
     //find odd and even in a given array
     int x[100],i,n;
@@ -713,7 +737,7 @@ int main()
         printf("the word is a palindrome");
     else
         printf("the word is not a palindrome");
-
+        
     */
     return(0);
 }
