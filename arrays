@@ -1,0 +1,283 @@
+#include<stdio.h>
+int main()
+{  
+   //find odd and even in a given array
+    int x[100],i,n;
+    printf("enter the range of array:");
+    scanf("%d",&n);
+    printf("enter the values:");
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&x[i]);
+    }
+    for(i=0;i<n;i++)
+    {
+        if(x[i]%2==0)
+        {
+            printf("%d is even number\n",x[i]);
+        }
+        else
+            printf("%d is odd number\n",x[i]);
+    }
+    
+    
+    //to find sum and avg of 10 int
+    int x[10],a,b;
+    printf("enter the array:");
+    for(a=0;a<10;a++)
+    {
+        scanf("%d",&x[a]);
+        b=b+x[a];
+    }
+    printf("the sum is %d\n",b);
+    printf("the average is %d\n",b/10);
+    
+    
+    
+    //to find whether number entered exist and how many times
+    int x[100],i,n,c=0,a;
+    printf("enter the range of array:");
+    scanf("%d",&n);
+    printf("enter the value:\n");
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&x[i]);
+    }
+    printf("enter the number to be searched:");
+    scanf("%d",&a);
+    for(i=0;i<n;i++)
+    {
+        if(x[i]==a)
+        {
+            c=c+1;
+        }
+    }
+    printf("the number of time is:%d",c);
+    
+    
+    
+    //to copy the elements of one array into another
+    int x[100],y[100],n,i;
+    printf("enter the size of array:");
+    scanf("%d",&n);
+    printf("enter the values:\n");
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&x[i]);
+        y[i]=x[i];
+    }
+    printf("\nthe elements of second array are:");
+    for(i=0;i<n;i++)
+    {
+        printf("%d\n",y[i]);
+    }
+    //to count number of duplicate elements in array
+    int x[100],y[100],i,j,n,duplicate = 0;
+    printf("enter the range:");
+    scanf("%d",&n);
+    printf("enter the values:");
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&x[i]);
+        y[i]=x[i];
+    }
+    for(i=0;i<n;i++)
+    {
+        for(j=i+1;j<n;j++)
+        {
+            if(x[i]==y[j])
+            {
+                duplicate=duplicate+1;
+                break;
+            }
+        }
+    }
+    printf("total number of duplicates: %d ",duplicate);
+    
+    
+    
+    //to print array in ascending order
+    int x[100],i,n, minimum, temp;
+    printf("enter the range:");
+    scanf("%d",&n);
+    printf("enter array:");
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&x[i]);
+        x[i];
+    }
+    for(i=0;i<n;i++)
+    {
+        for(int j=i+1;j<n;j++)
+        {
+            if(x[i] > x[j] )
+            {
+                temp=x[i];
+                x[i] = x[j];
+                x[j] = temp;
+            }
+        }
+    }
+    for(int k =0; k<n; k++)
+    {
+        printf("%d", x[k]);
+    }
+    
+    
+    
+    //to print array in decending order
+    int x[100],i,n, maximum, temp;
+    printf("enter the range");
+    scanf("%d",&n);
+    printf("enter array");
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&x[i]);
+        x[i];
+    }
+    for(i=0;i<n;i++)
+    {
+        for(int j=i+1;j<n;j++)
+        {
+            if(x[i] < x[j] )
+            {
+                temp=x[i];
+                x[i] = x[j];
+                x[j] = temp;
+            }
+        }
+    }
+    for(int k =0; k<n; k++)
+    {
+        printf("%d", x[k]);
+    }
+    
+   
+    
+    //to find maximum number in an array
+    int x[100],a,b,n,d=0;
+    printf("enter the range of array:");
+    scanf("%d",&n);
+    printf("enter the array:");
+    for(a=0;a<n;a++)
+    {
+        scanf("%d",&x[a]);
+        if(d<x[a])
+        {
+            d=x[a];
+            printf("the maximum number is:%d",d);
+        }
+    }
+    
+    
+    //to pint minimum number in an array
+    int x[100],a,b,n,d;
+    printf("enter the range of array:");
+    scanf("%d",&n);
+    printf("enter the array:");
+    d=x[0];
+    for(a=0;a<n;a++)
+    {
+        scanf("%d",&x[a]);
+        if(d>x[a])
+        {
+            d=x[a];
+            printf("the minimum number is:%d",d);
+        }
+    }
+    
+    
+    //input a string and print same string
+    char str[100];
+    printf("enter the string:");
+    gets(str);
+    printf("%s",str);
+    //to find length of string
+    char str[100];
+    int i=0,length=0;
+    printf("enter the string:");
+    gets(str);
+    while(str[i]!='\0')
+    {
+        length++;
+        i++;
+    }
+    printf("%d",length);
+    
+    
+    
+    //to input a string and print its reverse
+    char str[100];
+    int i=0,j,length=0;
+    printf("enter the string:");
+    gets(str);
+    while(str[i]!='\0')
+    {
+        length++;
+        i++;
+    }
+    printf("the length of string is:%d",length);
+    for(j=0;j<=length;j++)
+    {
+        printf("the reverse of string is: %c",str[length-1-j]);
+    }
+    
+    
+    
+    //check whether the string is a palindrome or not
+    char  str[100];
+    int i=0;length,j,flag=0;
+    printf("enter the string:");
+    gets(str);
+    while(str[i]!='\0')
+    {
+        length++;
+        i++;
+    }
+    printf("the length is %d\n",length);
+    for(j=0;j<length/2;j++)
+    {
+        if(str[j]!=str[length-1-j])
+        {
+            flag=1;
+            break;
+        }
+    }
+    if(flag==0)
+        printf("the word is a palindrome");
+    else
+        printf("the word is not a palindrome");
+    
+    
+    
+    //to check whether the string is a palindrome or not
+    char str1[100],str2[100];
+    int i=0,j,k,length=0,flag=0;
+    printf("enter the string:");
+    gets(str1);
+    while(str1[i]!='\0')
+    {
+        length++;
+        i++;
+    }
+    printf("the length is %d\n",length);
+    for(j=0;j<=length;j++)
+    {
+        str2[j]=str1[j];
+    }
+    for(k=0;k<=length/2;k++)
+    {
+        if(str1[k]!=str2[length-1-k])
+        {
+            flag=1;
+            break;
+        }
+    }
+    if(flag==0)
+        printf("the word is a palindrome");
+    else
+        printf("the word is not a palindrome");
+        
+    */
+    return(0);
+}
